@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>MechaTrack</title>
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>⚙️ MechaTrack</h2>
+
+            <nav>
+                <a href="#">Dashboard</a>
+                <a href="#">Courses</a>
+                <a href="#">Tasks</a>
+                <a href="#">Projects</a>
+                <a href="#">Schedule</a>
+            </nav>
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <header>
+                <h1>Welcome back 👋</h1>
+                <p>Your engineering student dashboard.</p>
+            </header>
+
+
+            <!-- Dashboard Cards -->
+            <section class="dashboard-cards">
+
+                <div class="card">
+                    <h3>Courses</h3>
+
+                    <p id="coursecount"></p>
+
+                    <div id="course-list"></div>
+
+                    <div class="course-input">
+                        <input type="text" id="course-input" placeholder="Enter course code">
+                    </div>
+
+                    <div class="course-buttons">
+                         <button id="add-course" class="add-button">Add Course</button>                   
+                     </div>   
+
+                     <p id="course-message"></p>
+                </div>
+
+                <div class="card">
+                    <h3>Tasks</h3>
+
+                    <p id="task-count">0</p>
+
+                    <div id="task-list"></div>
+
+                    <div class="task-input">
+                        <input
+                            type="text"
+                            id="task-input"
+                            placeholder="Enter task"
+                        >
+
+                        <select id="task-course">
+                            <option value="">Select course</option>
+                        </select>
+                    </div>
+
+                    <button id="add-task" class="add-button">Add Task</button>
+
+                    <p id="task-message"></p>
+                </div>
+
+                
+                <div class="card">
+                    <h3>Projects</h3>
+                    <p id="project-count">0</p>
+
+                    
+                <div class="project-summary">
+                    <div class="project-summary-item">
+                        <span>Total projects</span>
+                        <strong id="total-projects">0</strong>
+                    </div>
+
+                    <div class="project-summary-item">
+                        <span>Completed</span>
+                        <strong id="completed-projects">0</strong>
+                    </div>
+
+                    <div class="project-summary-item">
+                        <span>In progress</span>
+                        <strong id="active-projects">0</strong>
+                    </div>
+
+                    <div class="project-summary-item">
+                        <span>Average progress</span>
+                        <strong id="average-project-progress">0%</strong>
+                    </div>
+                </div>
+
+
+                    <div id="project-list"></div>
+
+                    <div class="course-input">
+                        <input
+                            type="text"
+                            id="project-input"
+                            placeholder="Enter project name"
+                        /> 
+
+                        <select id="project-status">
+                           <option value="Planned">Planned</option>
+                           <option value="In progress">In progress</option>
+                           <option value="Completed">Completed</option>
+                        </select>
+
+                        <button id="add-project" class="add-button">
+                            Add Project
+                        </button>
+
+                        <p id="project-message"></p>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <h3>Progress</h3>
+                    <p id="progress-count">0%</p>
+                </div>
+
+            </section>
+
+
+            <!-- Upcoming Tasks -->
+            <section class="tasks">
+
+                <h2>Upcoming Tasks</h2>
+
+                <div id="upcoming-task-list"></div>
+
+            </section>
+
+        </main>
+
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
